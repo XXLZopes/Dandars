@@ -1,0 +1,46 @@
+html {
+    height: 200vh;
+    background-color: rgb(31,21,53);
+    /* background: linear-gradient(to bottom, rgb(31,21,53), rgb(35, 28, 59));  */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.landscape{
+    display: inline;
+    position: sticky;
+    width: 100%;
+    max-width: 100%;
+}
+
+.cave {
+    margin-top: -18vw;
+}
+
+#about {
+    height: 550px;
+    width: 50%;
+    background-color: red;
+}
+
+#Ribbon_2Con {
+    /* display: none; */
+    /* height: 10rem; */
+    /* background: #9F7880; */
+    padding: 2rem;
+    /* position: sticky; */
+    position: absolute;
+    z-index: 999;
+    /* width: 50%; */
+    
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+#Ribbon_2 {
+    width: 35%;
+}
