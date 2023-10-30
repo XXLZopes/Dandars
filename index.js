@@ -18,22 +18,26 @@ function parallaxEffect(elementId, speedAdjuster) {
     }
 
     const updatePosition = () => {
-        const offset = window.scrollY / speedAdjuster;
+        const offset = (window.scrollY) /  speedAdjuster;
         element.style.transform = `translateY(${offset}px)`;
     };
 
     window.addEventListener('scroll', debounce(() => {
         requestAnimationFrame(updatePosition);
-    }, 10));
+    }),10);
 }
 
-// Example usage:
-// parallaxEffect('yourElementId', 1.5);
 
 
-parallaxEffect("Layer_1", -.9)
-parallaxEffect("Layer_2", -2)
-parallaxEffect("Layer_6", -.9)
-parallaxEffect("Ribbon_2Con", 10)
-// setParallaxEffect("Layer_3", 0)
-// parallaxEffect("Layer_4", 100)
+parallaxEffect("Layer_1", 18);
+parallaxEffect("Layer_2", -18);
+
+parallaxEffect("Layer_3", -15);
+
+parallaxEffect("Layer_4", -10);
+
+parallaxEffect("section_2", -4);
+
+parallaxEffect("DandarsBanner", 10);
+
+parallaxEffect("what_we_carry", -10);
