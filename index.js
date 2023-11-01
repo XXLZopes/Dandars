@@ -5,10 +5,14 @@ const closeNavEl = document.getElementById('closeNav');
 
 menuIconEl.addEventListener('click', ()=> {
     menuIconEl.style.display = 'none';
-    mobileNavEl.style.transform = 'translateX(0)';
+    closeNavEl.style.display = 'flex';
+    setTimeout(()=> {
+        mobileNavEl.style.transform = 'translateX(0)';
+    }, 0)
 })
 
 closeNavEl.addEventListener('click', ()=> {
+    closeNavEl.style.display = 'none';
     menuIconEl.style.display = 'initial';
-    mobileNavEl.style.transform = 'translateX(-101vw)';
+    mobileNavEl.style.transform = 'translateX(-200vw)';
 })
