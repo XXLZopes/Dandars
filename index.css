@@ -1,4 +1,5 @@
 body {
+  overflow-x: hidden;
   height: 0;
   background-color: rgb(31, 21, 53);
 }
@@ -7,6 +8,51 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+#mobileNav {
+  transform: translateX(-200vw);
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  z-index: 9999;
+  width: 100vw;
+  height: 100vh;
+  transition-duration: .3s;
+}
+
+#mobileNav ul {
+  height: 100%;
+  width: 60%;
+  background-color: rgb(31, 21, 53);
+  color: white;
+  padding: 2rem;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#mobileNav ul h1 {
+  color: white;
+  text-decoration: underline;
+}
+
+#closeNav {
+  cursor: pointer;
+  display: flex;
+  justify-content: flex-end;
+  padding: .5rem;
+  font-size: 2.5rem;
+  color: white;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  position: fixed;
+  top: 0;
+  background-color: rgba(0, 0, 0, .5);
 }
 
 header {
@@ -180,16 +226,23 @@ footer div p {
     font-size: 0.7rem;
   }
 }
-
-#mobileMenuIcon {
-  display: none;
+@media screen and (min-width: 675px) {
+  #mobileNav {
+    display: none;
+  }
+  #mobileMenuIcon {
+    display: none;
+    opacity: 0;
+    position: fixed;
+    z-index: -100;
+  }
 }
-
 @media screen and (max-width: 675px) {
   #monitorHeader {
     display: none;
   }
   #mobileMenuIcon {
+    cursor: pointer;
     display: initial;
     position:fixed;
     z-index: 999;
@@ -199,20 +252,78 @@ footer div p {
     width: 12vw;
     max-width: 2.5rem;
     background-color: rgba(245, 224, 209, 0.9);
-    padding: .4rem;
+    padding: .5rem .4rem;
     border-radius: .5rem;
+    border: solid rgb(31, 21, 53) 1px;
   }
-
-  /* #mobileMenuIcon:hover {
-    transition-duration: 0.23s;
-    background-color: rgba(76, 60, 115, .9);
-    box-shadow: 0 0 40px 5px rgb(255, 255, 255, 0.9);
-    scale: 1.1;
-  } */
-
   #Layer_1 {
     transform-origin: center center !important;
     transform: scale(2) translateY(9rem) !important; 
   }
-  
+  #filigree_1 {
+    width: 80%;
+  }
+  #what_we_carry h1 {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+  #what_we_carry h2 {
+    font-size: 0.7rem;
+  }
+  #what_we_carry p {
+    font-size: 0.5rem;
+  }
+
+  footer div p {
+    font-size: 0.6rem;
+  }
+  footer {
+    position: relative;
+    bottom: -1.5rem;
+    flex-direction: column;
+  }
+  footer div {
+    max-width: 100%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #section_1 {
+  }
+  #section_2 {
+    overflow-x: hidden;
+  }
+  .cave {
+    height: 100vh;
+    margin-top: -13vw;
+  }
+  #filigree_1 {
+    width: 70%;
+  }
+  #what_we_carry {
+    width: 90%;
+    height: 50%;
+    margin-top: 10vh;
+  }
+  footer {
+    bottom: 4.5rem;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .cave {
+    margin-top: -18vw;
+  }
+}
+
+@media screen and (max-width: 490px) {
+  .cave {
+    margin-top: -22vw;
+  }
+}
+
+@media screen and (max-width: 430px) {
+  .cave {
+    margin-top: -30vw;
+  }
 }
