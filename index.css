@@ -326,8 +326,11 @@ footer div p {
   }
 }
 
-@media screen and (max-width: 430px) {
+@media screen and (max-width: 420px) {
   .cave {
-    margin-top: -30vw;
+    margin-top: -20vw;
+  }
+  #section_2 {
+    margin-top: -22vw;
   }
 }
